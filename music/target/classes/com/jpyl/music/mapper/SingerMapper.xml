@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致
+    id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.jpyl.music.mapper.SingerMapper">
+    <!--一级页面获取的歌手列表，热门歌手-->
+    <!--根据分类条件筛选歌手列表-->
+    <select id="getFenLeiSingerList" resultType="java.util.Map">
+        select id,s_name,s_img from m_singer where 1=1
+        <!--type1和type2默认情况都是0-->
+        <choose>
+            <when test="type1==0"></when><!--type1为歌手父分类-->
+            <when test="type1==1">and s_typeid=1</when>
+            <when test="type1==2">and s_typeid=2</when>
+            <when test="type1==3">and s_typeid=3</when>
+
+            <when test="type2==0"></when><!--type2为歌手子分类-->
+            <when test="type2==1">and s_son_typeid=1</when>
+            <when test="type2==2">and s_son_typeid=2</when>
+            <when test="type2==3">and s_son_typeid=3</when>
+            <when test="type2==4">and s_son_typeid=4</when>
+            <when test="type2==5">and s_son_typeid=5</when>
+            <otherwise></otherwise><!--默认情况-->
+        </choose>
+        order by s_hits desc limit #{page},50
+    </select>
+
+</mapper>

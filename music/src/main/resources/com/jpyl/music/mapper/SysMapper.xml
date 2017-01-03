@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致
+    id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.jpyl.music.mapper.SysMapper">
+    <!--管理员登录-->
+    <select id="sysLogin" resultType="java.util.Map">
+        select * from m_sys where s_name=#{sysname} and s_pass=#{syspass} limit 1
+    </select>
+
+    <!--后台上传歌曲-->
+    <!--上传歌曲要分很多步,大概就是
+        1.上传歌词文件,得返回歌词id
+        2.上传mv文件,返回mvid
+        3.在前台搜索歌手或者填写歌手,选择对应歌手,这里的逻辑是歌手存在就直接选择,返回歌手id,歌手不存在,前台填写歌手名,插入歌手,返回歌手id
+        4.专辑和歌手是一样的逻辑
+        5.选择对应的分类,返回对应的分类id
+        6.上传对应的音乐的普清格式,插入相关路径
+        7.如果有音乐的高清格式,上传高清文件,插入相对路径,没有的话就设置高清格式为0
+        8.音乐的无损格式和高清格式逻辑相同
+        9.铃声和高清格式逻辑相同
+        10.最后插入各个相关的表,代码必须在同一个代码块中,一处失败就整体回滚
+    -->
+    <!--第一步,上传歌词文件,返回歌词id-->
+    <insert id="sysUploadLrc" parameterMap="java.util.Map" useGeneratedKeys="true" keyProperty="m_lrcid">
+        insert into m_lrc(l_url,mid) values (#{l_url},#{mid})
+    </insert>
+
+    <!--第二步,上传mv文件,返回mvid-->
+    <insert id="sysUploadMV" parameterMap="java.util.Map" useGeneratedKeys="true" keyProperty="m_mvid">
+        insert into m_mv(v_url,v_sum,v_addtime,v_typeid,v_cover,v_title,v_hits,v_singer,v_shares,v_time_size,mid)values
+        (#{v_url},#{v_sum},now(),#{v_typeid},#{v_cover},#{v_title},0,#{v_singer},0,#{v_time_size},#{mid})
+    </insert>
+
+
+    <!--插入歌曲文件及相关信息-->
+    <insert id="sysUploadMusic" parameterMap="java.util.Map" useGeneratedKeys="true" keyProperty="mid">
+        insert into m_music(m_code,m_name,m_lrcid,m_addtime,m_onoff,m_free,m_singerid,m_language,m_albumid,m_hits
+        ,m_typeid,m_puqingurl,m_gaoqingurl,m_wusunurl,m_shares,m_yuanchuang,m_is_k,m_time_size,m_mvid,m_lingsheng,m_k_counts)
+        values (0,#{m_name},0,now(),1,0,#{m_singerid},#{m_language},#{m_albumid},0,#{m_typeid},#{m_puqingurl},#{m_gaoqingurl},
+        #{m_wusunurl},0,#{m_yuanchuang},#{m_is_k},#{m_time_size},0,#{m_lingsheng},0)
+    </insert>
+
+    <!--最后更新音乐表的歌词和mv字段-->
+    <update id="sysUpdateLrcAndMV">
+        update m_music set m_lrcid=#{m_lrcid},m_mvid=#{m_mvid} where id=#{mid}
+    </update>
+
+
+
+
+
+    <!--管理员获取专辑列表-->
+    <select id="sysGetAlbumList" resultMap="java.util.Map">
+        select
+    </select>
+
+    <!--管理员根据名字查找专辑-->
+    <select id="sysFindAlbumByName" resultMap="java.util.Map">
+
+    </select>
+
+
+</mapper>

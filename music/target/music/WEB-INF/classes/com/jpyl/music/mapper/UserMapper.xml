@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致
+    id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.jpyl.music.mapper.UserMapper">
+    <!--测试查询用户信息-->
+    <select id="getUserInfo" resultType="java.util.Map">
+        select * from d_student where student_id=#{userid}
+    </select>
+
+    <!--用户注册，需要用户名，昵称，密码-->
+    <insert id="userRegister">
+        insert into m_user(u_username,u_nickname,u_userpass) values(#{username},#{nickname},#{userpass})
+    </insert>
+
+    <!--用户注册的时候判断用户名是否存在-->
+    <select id="userIsRegister" resultType="java.lang.Integer">
+        select count(id) flag from m_user where u_username=#{username} limit 1
+    </select>
+
+    <!--用户注册的时候判断昵称是不是重复-->
+    <select id="nickIsExist" resultType="java.lang.Integer">
+        select count(id) flag from m_user where u_nickname=#{nickname} limit 1
+    </select>
+
+    <!--用户登录判断用户名和密码-->
+    <select id="userLogin" resultType="java.util.Map">
+        select id,u_username,u_nickname,u_gender,u_city,u_age,u_realname,u_sum,u_groupid,u_money,u_level,u_img,u_phonenum
+        from m_user where u_username=#{username} and u_userpass=#{userpass} limit 1
+    </select>
+
+    <!--用户登录的时候判断用户是不是已经有token了-->
+    <select id="hasToken" resultType="java.lang.Integer">
+        select count(id) flag from m_token where t_uid=#{uid} limit 1
+    </select>
+
+    <!--登录的时候有token的用户更新token-->
+    <update id="changeToken">
+        update m_token set t_token=#{token},t_time=now() where t_uid=#{uid}
+    </update>
+
+    <!--登录的时候没有token的时候插入token-->
+    <insert id="insertToken">
+        insert into m_token(t_uid,t_token,t_time) values(#{uid},#{token},now())
+    </insert>
+
+    <!--登录的时候返回用户最新的token和用户信息-->
+    <select id="getToken" resultType="java.util.Map">
+        select t_uid,t_token,t_time from m_token where t_uid=#{uid}
+    </select>
+
+    <!--需要验证用户是否登录的时候验证用户token-->
+    <select id="checkToken" resultType="java.lang.Integer">
+        select count(id) flag from m_token where t_uid=#{uid} and t_token=#{token} and TIMESTAMPDIFF(DAY,t_time,now())&lt;30 limit 1
+    </select>
+
+    <!--判断用户的token是否失效-->
+    <select id="checkTokenValue" resultType="java.lang.String">
+        select t_time from m_token where t_uid=#{uid} and t_token=#{token} limit 1
+    </select>
+
+    <!--用户进入个人资料界面的时候获取个人信息-->
+    <!--<select id="getUserInfo" resultType="java.util.Map">-->
+        <!--select  from m_user        -->
+    <!--</select>-->
+
+    <!--用户修改个人信息-->
+    <update id="changeUserInfo">
+        update m_user set u_gender=#{gender},u_city=#{city},u_age=#{age},u_realname=#{realname},u_sum=#{sum},
+        u_userpass=#{userpass},u_phonenum=#{phonenum},u_nickname=#{nickname}
+        <if test="img!=null">
+            ,u_img=#{img}
+        </if>
+        where id=#{userid}
+    </update>
+
+
+    <!--用户上传自己的K歌-->
+    <insert id="userKMusic">
+        insert into  m_k(k_uid,k_url,k_time,k_hits,k_mid,k_singerid) values (#{uid},#{url},now(),0,#{mid},#{singerid});
+    </insert>
+
+    <!--用户点击K歌时m_k_counts加1-->
+    <update id="updateKCounts">
+        update m_music set m_k_counts=m_k_counts+1 where id=#{mid}
+    </update>
+
+    <!--用户评论歌曲-->
+    <insert id="userPingLunMusic">
+        insert into m_music_topic(c_uid,c_musicid,c_content,c_time) values(#{uid},#{mid},#{content},now())
+    </insert>
+
+    <!--用户喜欢或是收藏歌曲-->
+    <insert id="userSaveMusic">
+        insert into m_user_save(mid,uid,sid,m_typeid,s_typeid,s_time)VALUES
+        (#{mid},#{uid},#{sid},#{m_typeid},#{s_typeid},now())
+    </insert>
+
+    <!--用户创建歌单-->
+    <insert id="userCreatSongsList">
+        insert into m_song_list(s_typeid,s_cover,s_title,s_musicids,s_hits,s_shares,s_uid,s_describe,s_createtime)
+        values (0,#{s_cover},#{s_title},0,0,0,#{s_uid},#{s_describe},now())
+    </insert>
+
+    <!--返回歌单分类-->
+    <select id="getSongsListType" resultType="java.util.Map">
+        select id,title,cover from m_song_list_type
+    </select>
+
+    <!--返回编辑之前的歌单数据-->
+    <select id="getDataBeforeUserEdit" resultType="java.util.Map">
+        select s_typeid,s_cover,s_title,s_describe from m_song_list where  id=#{id}
+    </select>
+
+    <!--用户编辑歌单-->
+    <update id="userEditSongsList">
+        update m_song_list set s_typeid=#{s_typeid},
+        s_title=#{s_title},s_describe=#{s_describe}
+        <if test="s_cover!=null">
+            ,s_cover=#{cover}
+        </if>
+        where id=#{id}
+    </update>
+
+    <!--用户添加歌曲到歌单-->
+    <update id="userAddSongToSongsList">
+        update m_song_list set s_musicids=CONCAT(s_musicids,#{s_musicids}) where id=#{id}
+    </update>
+
+
+</mapper>

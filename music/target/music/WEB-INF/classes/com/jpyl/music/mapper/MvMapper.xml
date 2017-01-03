@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致
+    id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.jpyl.music.mapper.MvMapper">
+    <!--获取热门mv列表-->
+    <select id="getHotMvList" resultType="java.util.Map">
+        select id,v_cover,v_hits,v_title,v_singer from m_mv order by v_hits desc limit #{page},50
+    </select>
+
+</mapper>

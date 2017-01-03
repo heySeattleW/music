@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致
+    id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.jpyl.music.mapper.SysMapper">
+    <!--管理员登录-->
+    <select id="sysLogin" resultType="java.util.Map">
+        select * from m_sys where s_name=#{sysname} and s_pass=#{syspass} limit 1
+    </select>
+
+</mapper>

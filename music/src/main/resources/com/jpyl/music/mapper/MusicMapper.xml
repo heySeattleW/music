@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace：必须与对应的接口全类名一致
+    id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.jpyl.music.mapper.MusicMapper">
+    <!--音乐排行榜相关-->
+    <!--Top500音乐-->
+    <select id="getTop500" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id order by m.m_hits desc limit #{page},50
+    </select>
+
+    <!--民歌榜-->
+    <select id="getMinGe" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where m_typeid=2 order by m.m_hits desc limit #{page},50
+    </select>
+
+    <!--K歌翻唱榜-->
+    <select id="getKTop" resultType="java.util.Map">
+        select k.id,k.k_uid,k_mid,k.k_singerid,m.m_name,s.s_name,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_k k left join m_music m on m.id=k.k_mid left join m_singer s
+        on s.id=k.k_singerid order by k.k_hits desc limit #{page},50
+    </select>
+
+    <!--流行榜-->
+    <select id="getPopular" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where m_typeid=1 order by m.m_hits desc limit #{page},50
+    </select>
+
+    <!--新歌榜-->
+    <select id="getNewSongs" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where TIMESTAMPDIFF(DAY,m.m_addtime,now())&lt;30 order by m.m_hits,m.m_addtime desc limit #{page},50
+    </select>
+
+    <!--原创音乐榜-->
+    <select id="getYuanChuang" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where m_yuanchuang=1 order by m.m_hits desc limit #{page},50
+    </select>
+
+    <!--个性化推荐-->
+
+    <!--当用户点赞喜欢音乐或者收藏音乐，或者下载音乐的时候会向这个表插入数据-->
+    <!--获取在个性表里面用户的数据-->
+    <select id="getGeXing" resultType="java.util.Map">
+        select id,mid,sid,m_typeid,s_typeid,count(m_typeid) m_typeids,count(s_typeid)s_typeids from m_user_save where uid=#{uid} and TIMESTAMPDIFF(DAY,s_time,now())&lt;7 order by m_typeids,s_typeids  limit 1;
+    </select>
+
+    <!--用户在个性表里面有数据，返回个性化推荐列表-->
+    <select id="returnGeXing" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng where s.s_typeid=#{s_typeid}
+        and m.m_typeid=#{m_typeid} order by m.m_hits,s.s_hits desc limit #{page},50
+    </select>
+
+    <!--用户在个性表里面没数据，默认推荐,现在默认的是top500的数据-->
+
+    <!--用户点击和分享的行为-->
+    <update id="userAction">
+        <choose>
+            <when test="type2==0"><!--用户对音乐进行操作-->
+                update m_music
+                <choose>
+                    <when test="type1==0">set m_hits=m_hits+1</when><!--用户的行为是点击-->
+                    <when test="type1==1">set m_shares=m_shares+1</when><!--用户的行为是分享-->
+                </choose>
+                where id=#{id};
+            </when>
+            <when test="type2==1"><!--用户对专辑进行操作-->
+                update m_album
+                <choose>
+                    <when test="type1==0">set a_hits=a_hits+1</when><!--用户的行为是点击-->
+                    <when test="type1==1">set a_shares=a_shares+1</when><!--用户的行为是分享-->
+                </choose>
+                where id=#{id};
+            </when>
+            <when test="type2==2"><!--用户对歌手进行操作-->
+                update m_singer
+                <choose>
+                    <when test="type1==0">set s_hits=s_hits+1</when><!--用户的行为是点击-->
+                    <when test="type1==1">set s_shares=s_shares+1</when><!--用户的行为是分享-->
+                </choose>
+                where id=#{id};
+            </when>
+            <when test="type2==3"><!--用户对mv进行操作-->
+                update m_mv
+                <choose>
+                    <when test="type1==0">set v_hits=v_hits+1</when><!--用户的行为是点击-->
+                    <when test="type1==1">set v_shares=v_shares+1</when><!--用户的行为是分享-->
+                </choose>
+                where id=#{id};
+            </when>
+            <when test="type2==4"><!--用户对歌单进行操作-->
+                update m_song_list
+                <choose>
+                    <when test="type1==0">set s_hits=s_hits+1</when><!--用户的行为是点击-->
+                    <when test="type1==1">set s_shares=s_shares+1</when><!--用户的行为是分享-->
+                </choose>
+                where id=#{id};
+            </when>
+        </choose>
+    </update>
+
+    <!--推荐里面的热销专辑-->
+    <select id="getHotSaleList" resultType="java.util.Map">
+        select count(v.a_id) counts,v.a_price,a.a_name,a.a_img,a_id,a_typeid from m_album_vip v
+        left join m_album a on a.id=v.a_id order by  counts desc limit #{page},50
+    </select>
+
+    <!--推荐里面的歌单推荐-->
+    <select id="getRecommSongsList" resultType="java.util.Map">
+        select id,s_typeid,s_cover,s_title,s_musicids from m_song_list order by s_hits limit #{page},50
+    </select>
+
+    <!--根据音乐id获取音乐详情-->
+    <select id="getMusicDetail" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_puqingurl,m_gaoqingurl,m_wusunurl,m_time_size,m_is_k,m.m_typeid,m_albumid,a.a_img,a.a_name,s.s_typeid,l.l_url from m_music m left join m_singer s on
+        m.m_singerid=s.id left join m_lrc l on l.id=m.m_lrcid left join m_album a on a.id=m.m_albumid  where m.id=#{mid} limit 1
+    </select>
+
+    <!--判断用户是不是收藏了这首歌-->
+    <select id="userIsSaveMusic" resultType="java.lang.Integer">
+        select count(id) flag from m_user_save where mid=#{mid} and uid=#{uid} limit 1
+    </select>
+
+    <!--推荐里面的新碟上架,一个月之内的上架的新专辑-->
+    <select id="getNewAlbumList" resultType="java.util.Map">
+        select id,a_img,a_name,a_singerid,s.s_name from m_album a left join m_singer s
+         on s.id=a.a_singerid  where TIMESTAMPDIFF(DAY,a.a_posttime,now())&lt;30
+        order by a.a_hits,a.a_posttime desc limit #{page},50
+    </select>
+
+    <!--推荐里面的今日歌曲推荐,这个暂时先不写，可能会由后台推送-->
+    <select id="getRecomSongToday" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where
+    </select>
+
+    <!--查找-->
+    <!--1.根据歌名查找歌曲-->
+    <select id="findSongsByName" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where m.m_name like '%${_parameter}%' 
+    </select>
+    
+    <!--2.根据名字查找歌手-->
+    <select id="findSingersByName" resultType="java.util.Map">
+        select id,s_name,s_img from m_singer where s_name like '%${_parameter}%'
+    </select>
+    
+    <!--3.根据名字查找专辑-->
+    <select id="findAlbumsByName" resultType="java.util.Map">
+        select id,a_img,a_name,a_singerid,s.s_name from m_album a left join m_singer s
+         on s.id=a.a_singerid  where a_name like '%${_parameter}%'
+    </select>
+    
+    <!--4.根据名字查找歌单-->
+    <select id="findSongsListByName" resultType="java.util.Map">
+        select id,s_typeid,s_cover,s_title,s_musicids from m_song_list where s_title like '%${_parameter}%'
+    </select>
+    
+    <!--5.根据名字查找mv-->
+    <select id="findMvByName" resultType="java.util.Map">
+        select id,v_cover,v_hits,v_title,v_singer from m_mv where v_title like '%${_parameter}%'
+    </select>
+
+    <!--附近热唱-->
+    <select id="nearHotK" resultType="java.util.Map">
+        select m.id,m.m_name,m.m_singerid,s.s_name,m_gaoqingurl,m.m_typeid,s.s_typeid,m.m_mvid,m.m_lingsheng from m_music m left join m_singer s on
+        m.m_singerid=s.id where m_is_k!=0 order by m_k_counts desc limit #{page},50
+    </select>
+    
+    
+</mapper>

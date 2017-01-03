@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_mapper" default="compile.module.mapper">
+  <dirname property="module.mapper.basedir" file="${ant.file.module_mapper}"/>
+  
+  <property name="module.jdk.home.mapper" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.mapper" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.mapper" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.mapper" value="-encoding UTF-8 -source 1.6 -target 1.6 ${compiler.args}"/>
+  
+  <property name="mapper.output.dir" value="${module.mapper.basedir}/../../../../../../../../../out/production/mapper"/>
+  <property name="mapper.testoutput.dir" value="${module.mapper.basedir}/../../../../../../../../../out/test/mapper"/>
+  
+  <path id="mapper.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="mapper.module.production.classpath">
+    <path refid="${module.jdk.classpath.mapper}"/>
+  </path>
+  
+  <path id="mapper.runtime.production.module.classpath">
+    <pathelement location="${mapper.output.dir}"/>
+  </path>
+  
+  <path id="mapper.module.classpath">
+    <path refid="${module.jdk.classpath.mapper}"/>
+    <pathelement location="${mapper.output.dir}"/>
+  </path>
+  
+  <path id="mapper.runtime.module.classpath">
+    <pathelement location="${mapper.testoutput.dir}"/>
+    <pathelement location="${mapper.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.mapper">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.mapper">
+    <patternset refid="excluded.from.module.mapper"/>
+  </patternset>
+  
+  <path id="mapper.module.sourcepath">
+    <dirset dir="${module.mapper.basedir}">
+      <include name="api"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.mapper" depends="compile.module.mapper.production,compile.module.mapper.tests" description="Compile module mapper"/>
+  
+  <target name="compile.module.mapper.production" depends="register.custom.compilers" description="Compile module mapper; production classes">
+    <mkdir dir="${mapper.output.dir}"/>
+    <javac2 destdir="${mapper.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.mapper}/javac">
+      <compilerarg line="${compiler.args.mapper}"/>
+      <bootclasspath refid="mapper.module.bootclasspath"/>
+      <classpath refid="mapper.module.production.classpath"/>
+      <src refid="mapper.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.mapper"/>
+    </javac2>
+    
+    <copy todir="${mapper.output.dir}">
+      <fileset dir="${module.mapper.basedir}/api">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.mapper.tests" depends="register.custom.compilers,compile.module.mapper.production" description="compile module mapper; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.mapper" description="cleanup module">
+    <delete dir="${mapper.output.dir}"/>
+    <delete dir="${mapper.testoutput.dir}"/>
+  </target>
+</project>

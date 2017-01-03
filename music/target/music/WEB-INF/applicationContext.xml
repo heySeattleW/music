@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/cache
+       http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+
+    <aop:aspectj-autoproxy/>
+
+    <context:component-scan base-package="com.jpyl.music.*">
+    </context:component-scan>
+
+    <context:annotation-config/>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+    <bean id="viewResolver2" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+
+
+    <!--<cache:annotation-driven cache-manager="cacheManager"/>-->
+
+
+    <!--<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">-->
+    <!--<property name="configLocation" value="classpath:ehcache.xml"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">-->
+    <!--<property name="cacheManager" ref="cacheManagerFactory"/>-->
+    <!--</bean>-->
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxUploadSize" value="1000000000"></property>
+        <property name="maxInMemorySize" value="40960"></property>
+    </bean>
+
+    <!--<bean id="multipartResolver"-->
+    <!--class="org.springframework.web.multipart.support.StandardServletMultipartResolver">-->
+    <!--</bean>-->
+
+    <!--<bean id="cacheManager"-->
+    <!--class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cache-manager-ref="ehcache"/>-->
+
+    <!--&lt;!&ndash; EhCache library setup &ndash;&gt;-->
+    <!--<bean id="ehcache"-->
+    <!--class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" p:config-location="classpath:ehcache.xml"/>-->
+
+
+    <!--<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+    <!--<property name="prefix" value="/"></property>-->
+    <!--<property name="suffix" value=".jsp"></property>-->
+    <!--</bean>-->
+
+    <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+    <!--<property name="defaultEncoding" value="utf-8" />-->
+    <!--<property name="maxUploadSize" value="10485760000" />-->
+    <!--<property name="maxInMemorySize" value="40960" />-->
+    <!--</bean>-->
+
+
+    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">-->
+    <!--<property name="driverClass" value="com.mysql.jdbc.Driver"/>-->
+    <!--<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/demo"/>-->
+    <!--<property name="user" value="root"/>-->
+    <!--<property name="password" value="root"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+    <!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+    <!--<property name="url" value="jdbc:mysql://localhost:3306/demo" />-->
+    <!--<property name="username" value="root" />-->
+    <!--<property name="password" value="root" />-->
+    <!--</bean>-->
+    <!--数据源-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl"
+                  value="jdbc:mysql://localhost:3306/music?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"/>
+        <property name="user" value="root"/>
+        <property name="password" value="123456"/>
+        <property name="acquireIncrement" value="10"></property>
+        <property name="initialPoolSize" value="10"></property>
+        <property name="maxIdleTime" value="20"></property>
+        <property name="maxPoolSize" value="100"></property>
+        <property name="minPoolSize" value="10"></property>
+    </bean>
+
+    <!--这里必须配置spring的事务管理器-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:configuration.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+        <!--<property name="transactionFactory">-->
+        <!--<bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory"/>-->
+        <!--</property>-->
+    </bean>
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.jpyl.music.mapper.*"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+    </bean>
+
+    <!-- comment here, using annotation -->
+    <!--<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">-->
+    <!--<constructor-arg index="0" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
+
+
+    <!--<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+    <!--<property name="dataSource" ref="dataSource" />-->
+    <!--</bean>-->
+
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+    <!--<tx:jta-transaction-manager />-->
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--<bean id="jdbcTemplate"-->
+    <!--class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
+
+    <!--<cache:annotation-driven cache-manager="cacheManager"/>-->
+    <!--<bean id="cacheManager" class="org.springframework.cache.concurrent.ConcurrentMapCacheManager" />-->
+
+    <!--<import resource="simplesm-context.xml"/>-->
+    <!--图形验证码配置-->
+    <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.border">yes</prop>
+                        <prop key="kaptcha.border.color">105,179,90</prop>
+                        <prop key="kaptcha.textproducer.font.color">blue</prop>
+                        <prop key="kaptcha.image.width">125</prop>
+                        <prop key="kaptcha.image.height">45</prop>
+                        <prop key="kaptcha.textproducer.font.size">45</prop>
+                        <prop key="kaptcha.session.key">code</prop>
+                        <prop key="kaptcha.textproducer.char.length">4</prop>
+                        <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+
+    <!--<mvc:interceptors>-->
+        <!--<bean class="com.jpyl.web.books.web.interceptor.HttpInterceptor"/>-->
+        <!--&lt;!&ndash;<mvc:interceptor>&ndash;&gt;-->
+        <!--&lt;!&ndash;<mvc:mapping path="/"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash; 定义在mvc:interceptor下面的表示是对特定的请求才进行拦截的 &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<bean class="com.jpyl.web.books.web.interceptor.HttpInterceptor"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</mvc:interceptor>&ndash;&gt;-->
+    <!--</mvc:interceptors>-->
+
+
+    <!--缓存配置-->
+
+    <!--<cache:annotation-driven cache-manager="cacheManager"/>-->
+
+
+    <!--<bean id="cacheManagerFactory" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">-->
+    <!--<property name="configLocation" value="classpath:ehcache.xml"/>-->
+    <!--</bean>-->
+
+    <!--<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">-->
+    <!--<property name="cacheManager" ref="cacheManagerFactory"/>-->
+    <!--</bean>-->
+
+
+    <!--&lt;!&ndash;QQ邮箱设置&ndash;&gt;-->
+    <!--<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">-->
+    <!--</bean>-->
+
+
+    <!--<import resource="simplesm-context.xml"/>-->
+
+    <!--<context:property-placeholder location="classpath*:memcached.properties"/>-->
+
+
+    <!--<bean name="defaultMemcachedClient" class="com.google.code.ssm.CacheFactory">-->
+    <!--<property name="cacheClientFactory">-->
+    <!--<bean class="com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl"/>-->
+    <!--</property>-->
+    <!--<property name="addressProvider">-->
+    <!--<bean class="com.google.code.ssm.config.DefaultAddressProvider">-->
+    <!--<property name="address" value="192.168.0.23:11211"/>-->
+    <!--</bean>-->
+    <!--</property>-->
+    <!--<property name="configuration">-->
+    <!--<bean class="com.google.code.ssm.providers.CacheConfiguration">-->
+    <!--<property name="consistentHashing" value="true"/>-->
+    <!--</bean>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--Redis 配置-->
+
+
+    <!--<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">-->
+        <!--<property name="maxTotal" value="10"/>-->
+        <!--<property name="maxIdle" value="10"/>-->
+        <!--<property name="minIdle" value="10"/>-->
+        <!--<property name="maxWaitMillis" value="2000"/>-->
+        <!--<property name="testOnBorrow" value="true"/>-->
+    <!--</bean>-->
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+        <!--&lt;!&ndash; 定义默认的异常处理页面 &ndash;&gt;-->
+        <!--<property name="defaultErrorView" value="/errors/500"/>-->
+        <!--&lt;!&ndash; 定义异常处理页面用来获取异常信息的变量名，也可不定义，默认名为exception &ndash;&gt;-->
+        <!--<property name="exceptionAttribute" value="ex"/>-->
+        <!--&lt;!&ndash; 定义需要特殊处理的异常，这是重要点 &ndash;&gt;-->
+    <!--</bean>-->
+
+    <!--多视图解析配置-->
+
+    <!--xml视图解析器-->
+    <!--<bean name="jaxb2MarshallingView" class="org.springframework.web.servlet.view.xml.MarshallingView">-->
+        <!--<constructor-arg>-->
+            <!--<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">-->
+                <!--<property name="classesToBeBound">-->
+                    <!--<array>-->
+                        <!--<value>com.jpyl.web.books.web.domain.sbtest</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.MapBean</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.books_shuxiang</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.bookfuck</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.BookDetial_shuxiang</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.ChapterContent_shuxiang</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.ChapterList_shuxiang</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.chapters</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.novel520.books_520</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.novel520.booklist_520</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.novel520.BookDetial_520</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.novel520.ChapterContent_520</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.novel520.ChapterList_520</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.novel520.chapters_520</value>-->
+                        <!--&lt;!&ndash;爱书客&ndash;&gt;-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.Books_aishuke</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.BookDetial_aishuke</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.BookDetialList_aishuke</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.BookList_aishuke</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.ChapterList_aishuke</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.Chapters_aishuke</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aishuke.ChapterContent_aishuke</value>-->
+
+                        <!--&lt;!&ndash;天涯&ndash;&gt;-->
+                        <!--<value>com.jpyl.web.books.web.domain.tianya.Books_tianya</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.tianya.BookList_tianya</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.tianya.ChapterList_tianya</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.tianya.Chapters_tianya</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.tianya.TotalChapters_tianya</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.tianya.ChapterContent_tianya</value>-->
+
+                        <!--&lt;!&ndash;爱阅读&ndash;&gt;-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.Author_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.BookDetial_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.BookDetialList_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.BookList_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.Books_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.ChapterContent_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.ChapterList_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.Chapters_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.ContentTag_aiyuedu</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.aiyuedu.VolumesList_aiyuedu</value>-->
+
+                        <!--&lt;!&ndash;神马阅读&ndash;&gt;-->
+                        <!--&lt;!&ndash;<value>com.jpyl.web.books.web.domain.shenma.BookDetial_shenma</value>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<value>com.jpyl.web.books.web.domain.shenma.Chapters_shenma</value>&ndash;&gt;-->
+
+                        <!--&lt;!&ndash;搜狗阅读&ndash;&gt;-->
+                        <!--<value>com.jpyl.web.books.web.domain.sougou.BookDetial_sougou</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.sougou.Chapters_sougou</value>-->
+
+                        <!--&lt;!&ndash;360阅读&ndash;&gt;-->
+                        <!--<value>com.jpyl.web.books.web.domain._360.Books_360</value>-->
+                        <!--&lt;!&ndash;书旗阅读&ndash;&gt;-->
+                        <!--<value>com.jpyl.web.books.web.domain.shuqi.Books_shuqi</value>-->
+                        <!--<value>com.jpyl.web.books.web.domain.shuqi.Chapters_shuqi</value>-->
+                    <!--</array>-->
+                <!--</property>-->
+            <!--</bean>-->
+        <!--</constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">-->
+    <!--<property name="order" value="2" />-->
+    <!--<property name="mediaTypes">-->
+        <!--<map>-->
+            <!--<entry key="json" value="application/json" />-->
+            <!--<entry key="xml" value="application/xml" />-->
+            <!--<entry key="pdf" value="application/pdf" />-->
+
+        <!--</map>-->
+    <!--</property>-->
+
+    <!--<property name="defaultViews">-->
+        <!--<list>-->
+            <!--&lt;!&ndash; JSON View &ndash;&gt;-->
+            <!--<bean-->
+                    <!--class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">-->
+            <!--</bean>-->
+            <!--&lt;!&ndash;  XML view &ndash;&gt;-->
+            <!--<bean class="org.springframework.web.servlet.view.xml.MarshallingView">-->
+                <!--<constructor-arg>-->
+                    <!--<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">-->
+                        <!--<property name="classesToBeBound">-->
+                            <!--<list>-->
+                                <!--<value>com.jpyl.web.books.web.domain.sbtest</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.MapBean</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.books_shuxiang</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.bookfuck</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.BookDetial_shuxiang</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.ChapterContent_shuxiang</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.ChapterList_shuxiang</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.chapters</value>-->
+
+                                <!--<value>com.jpyl.web.books.web.domain.novel520.books_520</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.novel520.booklist_520</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.novel520.BookDetial_520</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.novel520.ChapterContent_520</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.novel520.ChapterList_520</value>-->
+                                <!--<value>com.jpyl.web.books.web.domain.novel520.chapters_520</value>-->
+                            <!--</list>-->
+                        <!--</property>-->
+                    <!--</bean>-->
+                <!--</constructor-arg>-->
+            <!--</bean>-->
+        <!--</list>-->
+    <!--</property>-->
+    <!--<property name="ignoreAcceptHeader" value="true" />-->
+
+    <!--</bean>-->
+    <mvc:resources location="/albumimg/" mapping="/albumimg/**"/>
+    <mvc:resources location="/lrc/" mapping="/lrc/**"/>
+    <mvc:resources location="/music/" mapping="/music/**"/>
+    <mvc:resources location="/mv/" mapping="/mv/**"/>
+    <mvc:resources location="/mvcover/" mapping="/mvcover/**"/>
+    <mvc:resources location="/singerimg/" mapping="/singerimg/**"/>
+    <mvc:resources location="/userimg/" mapping="/userimg/**"/>
+</beans>
