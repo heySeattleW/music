@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5cf5258-f2cf-43c5-8a0b-3fed71bbde22" name="Default" comment="" />
+    <list default="true" id="7e5b85e6-8532-47b0-a6dc-99fe586c2c9e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java" />
+    </list>
     <ignored path="music.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,109 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SysMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/SysMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
-              <folding>
-                <marker date="1483426008000" expanded="true" signature="352:425" placeholder="select * fro... m_sys" />
-                <marker date="1483426008000" expanded="true" signature="985:1038" placeholder="insert into m_lrc... " />
-                <marker date="1483426008000" expanded="true" signature="1195:1300" placeholder="insert into m_mv... " />
-                <marker date="1483426008000" expanded="true" signature="1195:1412" placeholder="insert into m_mv... " />
-                <marker date="1483426008000" expanded="true" signature="1564:1795" placeholder="insert into m_music... " />
-                <marker date="1483426008000" expanded="true" signature="1564:2007" placeholder="insert into m_music... " />
-                <marker date="1483426008000" expanded="true" signature="2094:2164" placeholder="update m_mus... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MusicController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="260" column="6" selection-start-line="260" selection-start-column="6" selection-end-line="260" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/dao/impl/SysDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="67" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1843">
-              <caret line="109" column="38" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/dao/def/SysDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/SysController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="238" column="9" selection-start-line="238" selection-start-column="9" selection-end-line="238" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadSomething.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/util/UploadSomething.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="147" column="22" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/service/def/SysService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/service/impl/SysServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="189">
+              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -137,17 +54,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/dao/impl/SysDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/service/impl/SysServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/service/def/SysService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/dao/def/SysDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/util/UploadSomething.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/SysController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/SysMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java" />
       </list>
     </option>
   </component>
@@ -156,18 +62,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
-  <component name="LogFilters">
-    <option name="FILTER_ERRORS" value="false" />
-    <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
-    <option name="FILTER_DEBUG" value="true" />
-    <option name="CUSTOM_FILTER" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
         <option name="pluginUpdatePolicy" value="DO_NOT_UPDATE" />
+        <option name="workOffline" value="true" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -192,105 +92,27 @@
             <id />
           </State>
           <State>
-            <id>AOP</id>
-          </State>
-          <State>
-            <id>Android Lint</id>
-          </State>
-          <State>
-            <id>CSS</id>
-          </State>
-          <State>
-            <id>CodeSpring CoreSpring</id>
-          </State>
-          <State>
-            <id>Control FlowGroovy</id>
-          </State>
-          <State>
             <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>Google Web Toolkit issues</id>
-          </State>
-          <State>
-            <id>GrailsGroovy</id>
-          </State>
-          <State>
-            <id>Groovy</id>
-          </State>
-          <State>
-            <id>Guice Inspections</id>
-          </State>
-          <State>
-            <id>HTML</id>
-          </State>
-          <State>
-            <id>Invalid elementsCSS</id>
-          </State>
-          <State>
-            <id>JBoss Seam issues</id>
-          </State>
-          <State>
-            <id>JSP Inspections</id>
           </State>
           <State>
             <id>Java</id>
           </State>
           <State>
-            <id>Java EE issues</id>
-          </State>
-          <State>
             <id>JavaScript</id>
           </State>
           <State>
-            <id>Javadoc issuesJava</id>
-          </State>
-          <State>
-            <id>Kotlin</id>
-          </State>
-          <State>
-            <id>OSGi</id>
-          </State>
-          <State>
-            <id>Play</id>
-          </State>
-          <State>
-            <id>Properties Files</id>
-          </State>
-          <State>
-            <id>Properties FilesJava</id>
-          </State>
-          <State>
-            <id>Serialization issuesJava</id>
-          </State>
-          <State>
-            <id>Spring</id>
-          </State>
-          <State>
-            <id>Spring BootSpring</id>
-          </State>
-          <State>
-            <id>Spring CoreSpring</id>
-          </State>
-          <State>
-            <id>TestNGJava</id>
-          </State>
-          <State>
-            <id>Threading issuesJava</id>
-          </State>
-          <State>
-            <id>Thymeleaf</id>
+            <id>Probable bugsJava</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>BPMN 2.0 configuration errors</id>
+            <id>Android</id>
           </State>
         </selected-state>
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -315,8 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,84 +174,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -484,154 +228,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="def" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="music" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="def" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -671,18 +267,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-    <property name="settings.editor.splitter.proportion" value="0.27868852" />
-    <property name="SearchEverywhereHistoryKey" value="vmoptions&#9;ACTION&#9;EditCustomVmOptions&#10;maven&#9;ACTION&#9;Maven.ShowSettings" />
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat8">
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -700,43 +295,6 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -762,158 +320,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -935,88 +341,12 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="music" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1047,56 +377,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
     <configuration default="false" name="tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.9" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -1109,7 +389,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_music" />
-        <option name="JNDI_PORT" value="1091" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1118,7 +397,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54400" />
+        <option name="DEBUG_PORT" value="50067" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -1179,55 +458,44 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b5cf5258-f2cf-43c5-8a0b-3fed71bbde22" name="Default" comment="" />
-      <created>1482843531666</created>
+      <changelist id="7e5b85e6-8532-47b0-a6dc-99fe586c2c9e" name="Default" comment="" />
+      <created>1483495582283</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1482843531666</updated>
-      <workItem from="1482843535087" duration="1720000" />
-      <workItem from="1482887891552" duration="144000" />
-      <workItem from="1482888044249" duration="4000" />
-      <workItem from="1482888063138" duration="1086000" />
-      <workItem from="1482889526348" duration="336000" />
-      <workItem from="1482890148265" duration="5414000" />
-      <workItem from="1482978821528" duration="1129000" />
-      <workItem from="1482994892129" duration="179000" />
-      <workItem from="1483002412906" duration="188000" />
-      <workItem from="1483002650173" duration="566000" />
-      <workItem from="1483011638765" duration="123000" />
-      <workItem from="1483011816822" duration="612000" />
-      <workItem from="1483060684029" duration="1302000" />
-      <workItem from="1483062363266" duration="16240000" />
-      <workItem from="1483415601814" duration="7582000" />
+      <updated>1483495582283</updated>
+      <workItem from="1483495585045" duration="778000" />
+      <workItem from="1483496470331" duration="781000" />
+      <workItem from="1483497373593" duration="152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36625000" />
+    <option name="totallyTimeSpent" value="1711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="977" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="977" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.497558" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694477" sideWeight="0.502442" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280543" sideWeight="0.4945055" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.497558" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2032967" sideWeight="0.493266" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21367522" sideWeight="0.506734" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1238,9 +506,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280543" sideWeight="0.497558" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1255,6 +522,9 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -1264,304 +534,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8094">
-          <caret line="438" column="34" selection-start-line="438" selection-start-column="34" selection-end-line="438" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4636">
-          <caret line="244" column="0" selection-start-line="10" selection-start-column="2" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8094">
-          <caret line="438" column="34" selection-start-line="438" selection-start-column="34" selection-end-line="438" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4636">
-          <caret line="244" column="0" selection-start-line="10" selection-start-column="2" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8094">
-          <caret line="438" column="34" selection-start-line="438" selection-start-column="34" selection-end-line="438" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4636">
-          <caret line="244" column="0" selection-start-line="10" selection-start-column="2" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8094">
-          <caret line="438" column="34" selection-start-line="438" selection-start-column="34" selection-end-line="438" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4636">
-          <caret line="244" column="0" selection-start-line="10" selection-start-column="2" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1573,360 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2888">
-          <caret line="160" column="5" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="50" column="75" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4636">
-          <caret line="244" column="0" selection-start-line="10" selection-start-column="2" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/MusicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1482723424000" expanded="true" signature="377:582" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="675:897" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="991:1229" placeholder="select k.id,... m_k" />
-            <marker date="1482723424000" expanded="true" signature="1324:1546" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="1642:1908" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2008:2234" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="2402:2601" placeholder="select id,mi... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="2717:2930" placeholder="select m.id,... " />
-            <marker date="1482723424000" expanded="true" signature="3126:3394" placeholder="update m_mus... " />
-            <marker date="1482723424000" expanded="true" signature="3483:3751" placeholder="update m_alb... " />
-            <marker date="1482723424000" expanded="true" signature="3840:4109" placeholder="update m_sin... " />
-            <marker date="1482723424000" expanded="true" signature="4198:4463" placeholder="update m_mv " />
-            <marker date="1482723424000" expanded="true" signature="4552:4824" placeholder="update m_son... " />
-            <marker date="1482723424000" expanded="true" signature="4968:5137" placeholder="select count... m_album_vip" />
-            <marker date="1482723424000" expanded="true" signature="5246:5341" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="5449:5771" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="5885:5963" placeholder="select count... m_user_save" />
-            <marker date="1482723424000" expanded="true" signature="6082:6302" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="6429:6600" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="6721:6924" placeholder="select m.id,... m_music" />
-            <marker date="1482723424000" expanded="true" signature="7038:7110" placeholder="select id,s_... m_singer" />
-            <marker date="1482723424000" expanded="true" signature="7222:7367" placeholder="select id,a_... m_album" />
-            <marker date="1482723424000" expanded="true" signature="7482:7581" placeholder="select id,s_... m_song_list" />
-            <marker date="1482723424000" expanded="true" signature="7689:7777" placeholder="select id,v_... m_mv" />
-            <marker date="1482723424000" expanded="true" signature="7871:8094" placeholder="select m.id,... m_music" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="106" column="64" selection-start-line="106" selection-start-column="64" selection-end-line="106" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/dao/def/SysDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/dao/impl/SysDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="67" column="5" selection-start-line="21" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="109" column="38" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/SysController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="238" column="9" selection-start-line="238" selection-start-column="9" selection-end-line="238" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/util/UploadSomething.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="147" column="22" selection-start-line="147" selection-start-column="22" selection-end-line="147" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/service/def/SysService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/service/impl/SysServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/jpyl/music/mapper/SysMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="57" column="59" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
-          <folding>
-            <marker date="1483426008000" expanded="true" signature="352:425" placeholder="select * fro... m_sys" />
-            <marker date="1483426008000" expanded="true" signature="985:1038" placeholder="insert into m_lrc... " />
-            <marker date="1483426008000" expanded="true" signature="1195:1300" placeholder="insert into m_mv... " />
-            <marker date="1483426008000" expanded="true" signature="1195:1412" placeholder="insert into m_mv... " />
-            <marker date="1483426008000" expanded="true" signature="1564:1795" placeholder="insert into m_music... " />
-            <marker date="1483426008000" expanded="true" signature="1564:2007" placeholder="insert into m_music... " />
-            <marker date="1483426008000" expanded="true" signature="2094:2164" placeholder="update m_mus... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jpyl/music/api/controller/MusicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="260" column="6" selection-start-line="260" selection-start-column="6" selection-end-line="260" selection-end-column="6" />
+        <state relative-caret-position="189">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1948,9 +575,20 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2011,6 +649,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
